@@ -29,4 +29,4 @@ jobs:
         with:
           context: ./flaskapp
           push: true
-          tags: project/flaskapp:${{ github.sha }}
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/project:${{ github.sha }}
