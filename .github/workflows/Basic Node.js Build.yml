@@ -4,7 +4,17 @@ on:
   pull_request:
 
 jobs:
-  question-2:
+  question-3v20:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm test
+
+  question-3v18:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,4 +22,14 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - run: npm run build
+      - run: npm test
+
+  question-3v16:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm test
