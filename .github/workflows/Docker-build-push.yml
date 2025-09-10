@@ -2,7 +2,8 @@ name: Demo 5
 
 on:
   push:
-    "v*.*.*"
+    tags:
+      - 'v**.**.**'
 
 jobs:
   docker:
