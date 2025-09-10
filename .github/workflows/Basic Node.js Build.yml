@@ -1,0 +1,15 @@
+name: Demo 2
+
+on:
+  pull_request:
+
+jobs:
+  question 2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npm run build
